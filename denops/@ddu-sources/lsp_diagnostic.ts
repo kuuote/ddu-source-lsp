@@ -121,6 +121,8 @@ async function getDiagnostic(
     return await getCocDiagnostics(denops, buffer);
   } else if (clientName === "vim-lsp") {
     return await getVimLspDiagnostics(denops, buffer);
+  } else if (clientName === "lspts") {
+    return;
   } else {
     clientName satisfies never;
   }
